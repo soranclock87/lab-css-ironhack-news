@@ -175,5 +175,61 @@ header {
 .btn-blue {
   background-color: #007bff;
 }
+
+.mobile-menu {
+  display: none;
+}
   
 /* Write your CSS below */
+
+@media (min-width: 760px) and (max-width: 1024px) {
+  .navbar li {
+    width: 25%;
+  }
+
+  .articles-container .article {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 760px) {
+ .navbar{
+  display: flex;
+  flex-direction: column;
+ }
+ .navbar li {
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+ }
+ .main-article{
+  flex-direction: column;
+ }
+
+ .main-article .image,
+ .main-article .content {
+  width: 100%;
+ }
+
+ .articles-container .article{
+  width: 100%;
+  margin-bottom: 20px;
+ }
+}
+
+@media (max-width: 480px) {
+  .newspaper-name {
+    border: 0;
+  }
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile-menu img {
+    width: 25px;
+    padding: 10px 0;
+  }
+  .navbar{
+    display: none;
+  }
+}
